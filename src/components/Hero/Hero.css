@@ -1,0 +1,584 @@
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  min-height: 500px;
+
+  /* توحيد التدرج اللوني على القسم بالكامل ليشمل الجانبين بدون فواصل */
+  background: radial-gradient(
+    circle at 40% 50%,
+    #1e1e2d 0%,
+    #0a0a0f 75%
+  );
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+
+/* =====================================
+   HERO LIGHT
+===================================== */
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: -50%;
+  left: -50%;
+
+  width: 200%;
+  height: 200%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 60%
+  );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =====================================
+   HERO TEXT
+===================================== */
+
+.hero-text-side {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  /* تعديل هنا ليكون النص والأزرار في المنتصف تماماً رأسياً */
+  justify-content: center;
+
+  align-items: flex-start;
+
+  text-align: left;
+
+  padding: 0 60px !important;
+
+  height: 100%;
+
+  width: 50%; /* تحديد العرض بنصف الشاشة بدقة ليتطابق مع القسم الآخر */
+  
+  background: transparent !important; /* إلغاء أي خلفية قد تصنع فوارق */
+}
+
+
+.hero-title {
+  font-size: 4rem;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  color: #ffffff;
+
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+.hero-description {
+  font-size: 1.1rem;
+
+  color: #d1d5db;
+
+  margin-bottom: 35px;
+
+  line-height: 1.8;
+
+  font-weight: 400;
+
+  max-width: 520px;
+}
+
+
+/* =====================================
+   HERO BUTTONS
+===================================== */
+
+.hero-buttons {
+  display: flex;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+
+.btn-shop {
+  background: #db2777;
+
+  color: white;
+
+  border: none;
+
+  padding: 13px 32px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 4px 20px rgba(219, 39, 119, 0.5);
+}
+
+
+.btn-shop:hover {
+  background: #be185d;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 8px 25px rgba(219, 39, 119, 0.6);
+}
+
+
+.btn-export {
+  background: transparent;
+
+  color: white;
+
+  border: 2px solid white;
+
+  padding: 11px 30px;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+
+.btn-export:hover {
+  background: white;
+
+  color: #111;
+
+  transform: translateY(-3px);
+}
+
+
+/* =====================================
+   HERO IMAGE SLIDER
+===================================== */
+
+.hero-img-side {
+  position: absolute !important;
+
+  top: 0;
+
+  right: 0;
+
+  width: 50%;
+
+  height: 100%;
+
+  /* جعل خلفية جانب الصورة شفافة تماماً لتظهر نفس تدرج الهيرو الخلفي بدون خط فاصل */
+  background: transparent !important; 
+
+  overflow: hidden;
+  z-index: 2;
+}
+
+
+.hero-slide-img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  /* استخدام contain لضمان ظهور المنتج كاملاً، مع جعل خلفية العنصر شفافة تماماً ليتحد مع تدرج الصفحة */
+  background-size: contain;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+  
+  background-color: transparent !important;
+
+  opacity: 0;
+
+  transition:
+    opacity 1.2s ease-in-out;
+}
+
+
+.hero-slide-img.active {
+  opacity: 1;
+}
+
+
+/* =====================================
+   CATEGORIES SECTION
+===================================== */
+
+#categories-section {
+  max-width: 1250px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =====================================
+   CATEGORIES TITLE
+===================================== */
+.categories-title {
+  margin-bottom: 30px;
+  padding-left: 0;
+
+  text-align: center;
+
+  width: 100%;
+}
+
+.categories-title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+
+  margin-bottom: 8px;
+}
+
+.categories-title p {
+  color: #777;
+
+  margin: 0;
+
+  font-size: 1rem;
+
+  text-align: center;
+}
+
+
+/* =====================================
+   CATEGORIES WRAPPER
+===================================== */
+
+.categories-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+/* =====================================
+   CATEGORY ARROWS
+===================================== */
+
+.category-arrow {
+  flex: 0 0 45px;
+
+  width: 45px;
+
+  height: 45px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  color: #222;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.15);
+
+  transition: all 0.3s ease;
+
+  z-index: 10;
+}
+
+
+.category-arrow:hover {
+  background: #db2777;
+
+  color: #ffffff;
+
+  transform: scale(1.1);
+}
+
+
+/* =====================================
+   HORIZONTAL CATEGORIES SLIDER
+===================================== */
+
+.categories-slider-container {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+
+  gap: 20px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+
+  padding: 10px 5px 25px;
+}
+
+
+.categories-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =====================================
+   CATEGORY ITEM
+===================================== */
+
+.category-slider-item {
+  flex: 0 0 calc(
+    (100% - 60px) / 4
+  );
+
+  min-width: 0;
+}
+
+
+/* =====================================
+   CATEGORY CARD
+===================================== */
+
+.category-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.category-card:hover {
+  transform:
+    translateY(-10px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================
+   CATEGORY IMAGE CONTAINER
+===================================== */
+
+.category-image-container {
+  width: 100%;
+
+  height: 240px;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f8f8f8;
+}
+
+
+.category-image-container img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  padding: 10px;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.category-card:hover
+.category-image-container img {
+  transform: scale(1.06);
+}
+
+
+/* =====================================
+   CATEGORY NAME
+===================================== */
+
+.category-name {
+  padding: 17px 10px;
+
+  text-align: center;
+
+  background: #ffffff;
+}
+
+
+.category-name h6 {
+  color: #222;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  margin: 0;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 991px) {
+
+  .hero-section {
+    height: 650px;
+  }
+
+
+  .hero-text-side {
+    padding: 0 40px !important;
+    width: 100%;
+  }
+
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+
+  .hero-img-side {
+    width: 100%;
+
+    opacity: 0.45;
+  }
+
+  .category-slider-item {
+    flex: 0 0 calc(
+      (100% - 20px) / 2
+    );
+  }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 576px) {
+
+  .hero-section {
+    height: 650px;
+  }
+
+
+  .hero-text-side {
+    padding: 0 25px !important;
+
+    align-items: center;
+
+    text-align: center;
+    
+    width: 100%;
+  }
+
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+
+  .categories-title h2 {
+    font-size: 1.7rem;
+  }
+
+  .category-slider-item {
+    flex: 0 0 85%;
+  }
+
+
+  .category-image-container {
+    height: 270px;
+  }
+
+
+  .category-arrow {
+    flex: 0 0 40px;
+
+    width: 40px;
+
+    height: 40px;
+  }
+
+}

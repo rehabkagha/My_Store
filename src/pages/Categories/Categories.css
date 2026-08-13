@@ -1,0 +1,29 @@
+/* تأثير الرفع الأنيق عند مرور الماوس على كروت التصنيفات فقط */
+.category-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.category-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* تنسيق قسم التصنيفات ليكون صف أفقي واحد بالعرض مع إخفاء شريط التمرير */
+.categories-slider-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding-bottom: 15px;
+  scrollbar-width: none;
+}
+
+.categories-slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* جعل كل كارت يأخذ عرض مناسب بحيث يظهر 4 كروت في العرض */
+.category-slider-item {
+  flex: 0 0 calc(25% - 15px);
+  min-width: 250px;
+}

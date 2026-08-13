@@ -1,0 +1,95 @@
+/* Products.css */
+
+.products-section {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.products-title {
+  color: #1a1a1a;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 20px !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+.product-img-wrapper {
+  width: 100%;
+  height: 250px;
+  background-color: #f4f4f5;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.product-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.store-badge {
+  color: #94a3b8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.product-name {
+  color: #1f2937;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.rating-stars svg:hover {
+  transform: scale(1.2);
+}
+
+.product-price {
+  color: #db2777 !important;
+  font-size: 1rem;
+}
+
+/* التعديل هنا: الدايرة برا وردية (Background)، والأيقونة جوه بيضاء / وردية واضحة */
+.cart-icon-btn {
+  width: 38px;
+  height: 38px;
+  background-color: #fce7f3 !important; /* الدايرة الوردي الناعمة اللي برا */
+  border: 1px solid #fbcfe8 !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* صندوق التسوق نفسه من جوه بقى أبيض وبارز بفضل الخلفية واللون */
+.cart-icon-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: #db2777 !important; /* لون أيقونة السلة نفسها */
+}
+
+.cart-icon-btn:hover {
+  background-color: #db2777 !important;
+}
+
+.cart-icon-btn:hover svg {
+  fill: #ffffff !important; /* لما تقفي عليها الماوس لونها هيبقى أبيض بالكامل العكس */
+}
